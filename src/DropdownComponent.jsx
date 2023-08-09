@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'; // or import fetch from 'node-fetch';
+//import axios from 'axios'; 
+import fetch from 'node-fetch';
 
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0

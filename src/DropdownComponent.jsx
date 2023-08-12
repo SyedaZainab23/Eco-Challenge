@@ -128,7 +128,6 @@ const DropdownComponent = () => {
           latitude: -49.5466,
           longitude: -50.1595,
           zoom: 3,
-
         }}
         style={{ height: "95vh", width: "45vw" }}
         mapStyle={`https://maps.geo.${region}.amazonaws.com/maps/v0/maps/${mapName}/style-descriptor`}

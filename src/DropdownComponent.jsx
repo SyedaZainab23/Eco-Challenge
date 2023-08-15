@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 //import axios from 'axios'; 
-import fetch from 'node-fetch';
 
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
@@ -48,8 +47,9 @@ const DropdownComponent = () => {
     // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint that returns your data.
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://46ljn61sng.execute-api.us-east-1.amazonaws.com/dev/get_teams');
-        setData(response.data);
+        const response = await fetch('https://tkhmrv3pyf.execute-api.sa-east-1.amazonaws.com/dev/get_teams');
+        const json=await response.json()
+        setData(json);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -72,10 +72,14 @@ const DropdownComponent = () => {
     
     if (selectedId) {
       try {
-        const response = await axios.post('https://46ljn61sng.execute-api.us-east-1.amazonaws.com/dev/map', requestData,{headers});
-
-        setSelectedIdData(response.data);
-        const converted = convertToGeoJSON(response.data);
+        const response = await fetch('https://tkhmrv3pyf.execute-api.sa-east-1.amazonaws.com/dev/map', {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify(requestData)
+        });
+        const json=await response.json()
+        setSelectedIdData(json);
+        const converted = convertToGeoJSON(json);
         setConvertedData(converted);
         console.log(converted)
       } catch (error) {
@@ -128,14 +132,15 @@ const DropdownComponent = () => {
           latitude: -49.5466,
           longitude: -50.1595,
           zoom: 3,
+
         }}
+        
         style={{ height: "95vh", width: "45vw" }}
         mapStyle={`https://maps.geo.${region}.amazonaws.com/maps/v0/maps/${mapName}/style-descriptor`}
         {...authHelper.getMapAuthenticationOptions()}
       >
         {/* See https://visgl.github.io/react-map-gl/docs/api-reference/navigation-control */}
         <NavigationControl position="bottom-right" showZoom showCompass={false} />
-        console.log(lockers)
         
 
         {/* Render markers for all lockers, with a popup for the selected locker */}

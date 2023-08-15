@@ -1,3 +1,10 @@
+body {
+  margin: 0; /* Reset default body margin */
+  background-color: #282c34; /* Set the common background color */
+  color: white;
+  font-size: calc(10px + 2vmin);
+  line-height: 0.2;
+}
 .App {
   text-align: center;
 }
@@ -15,7 +22,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

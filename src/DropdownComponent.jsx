@@ -47,7 +47,7 @@ const DropdownComponent = () => {
     // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint that returns your data.
     const fetchData = async () => {
       try {
-        const response = await fetch('https://tkhmrv3pyf.execute-api.sa-east-1.amazonaws.com/dev/get_teams');
+        const response = await fetch('https://46ljn61sng.execute-api.us-east-1.amazonaws.com/dev/get_teams');
         const json=await response.json()
         setData(json);
       } catch (error) {
@@ -72,7 +72,7 @@ const DropdownComponent = () => {
     
     if (selectedId) {
       try {
-        const response = await fetch('https://tkhmrv3pyf.execute-api.sa-east-1.amazonaws.com/dev/map', {
+        const response = await fetch('https://46ljn61sng.execute-api.us-east-1.amazonaws.com/dev/map', {
           method: 'POST',
           headers: headers,
           body: JSON.stringify(requestData)

@@ -24,5 +24,18 @@
       "StackId": "arn:aws:cloudformation:us-east-1:429009223057:stack/amplify-nakatomirace-nakatomi-174340/a48716e0-3634-11ee-8fa6-0e35fad61303",
       "AmplifyAppId": "d22onh9t55z5x1"
     }
+  },
+  "zainab": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nakatomirace-zainab-200910-authRole",
+      "UnauthRoleArn": "arn:aws:iam::429009223057:role/amplify-nakatomirace-zainab-200910-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::429009223057:role/amplify-nakatomirace-zainab-200910-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-nakatomirace-zainab-200910-deployment",
+      "UnauthRoleName": "amplify-nakatomirace-zainab-200910-unauthRole",
+      "StackName": "amplify-nakatomirace-zainab-200910",
+      "StackId": "arn:aws:cloudformation:us-east-1:429009223057:stack/amplify-nakatomirace-zainab-200910/20d6d700-3bc9-11ee-8185-0aa8e396fddd",
+      "AmplifyAppId": "d2w2qa3t4gleco"
+    }
   }
 }

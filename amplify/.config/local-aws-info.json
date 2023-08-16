@@ -8,5 +8,10 @@
     "configLevel": "project",
     "useProfile": true,
     "profileName": "zainab"
+  },
+  "zainab": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/syedazn/.amplify/awscloudformation/KCZEFirzNT"
   }
 }

@@ -1,17 +1,7 @@
 {
   "dev": {
     "configLevel": "project",
-    "useProfile": true,
-    "profileName": "zainab"
-  },
-  "nakatomi": {
-    "configLevel": "project",
-    "useProfile": true,
-    "profileName": "zainab"
-  },
-  "zainab": {
-    "configLevel": "project",
     "useProfile": false,
-    "awsConfigFilePath": "/Users/syedazn/.amplify/awscloudformation/KCZEFirzNT"
+    "awsConfigFilePath": "/Users/syedazn/.amplify/awscloudformation/APUMM7brkn"
   }
 }

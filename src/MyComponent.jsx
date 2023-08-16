@@ -13,7 +13,7 @@ const MyComponent = () => {
         // Hide the table if it's already shown
         setShowTable(false);}
       else{
-      const response = await fetch('https://46ljn61sng.execute-api.us-east-1.amazonaws.com/dev/get_teams');
+      const response = await fetch('https://46ljn61sng.execute-api.us-east-1.amazonaws.com/dev/top_teams');
       const jsonData = await response.json();
       setData(jsonData);
       setShowTable(true);
